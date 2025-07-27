@@ -1,0 +1,66 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: #00ffcc;
+  overflow-x: hidden;
+}
+body.dark-mode {
+  background-color: #f0f0f0;
+  color: #111;
+}
+canvas#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+header.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #000000, #001f1f);
+}
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #00ffcc;
+}
+.glitch {
+  font-size: 48px;
+  animation: glitch 1s infinite;
+}
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #f00; }
+  50% { text-shadow: -2px -2px #0ff; }
+  100% { text-shadow: 2px -2px #0f0; }
+}
+section {
+  padding: 40px 20px;
+}
+ul { list-style-type: none; padding: 0; }
+li { padding: 5px 0; }
+.btn, button {
+  padding: 10px 20px;
+  background-color: #00ffcc;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.reveal { opacity: 0; transform: translateY(50px); transition: all 0.6s ease; }
+.reveal.active { opacity: 1; transform: translateY(0px); }
